@@ -3,24 +3,24 @@
  */
 
 (function(){
-    angular.module('postService', [])
-        .factory('postServe',['$http', function($http){
+    angular.module('categoryService', [])
+        .factory('categoryService',['$http', function($http){
 
             return{
-                getPost: function(){
-                    return $http.get('/api/posts');
+                getCategory: function(){
+                    return $http.get('/api/category');
                 },
-                create: function(postData){
-                    return $http.post('/api/posts', postData);
+                create: function(categoryData){
+                    return $http.post('/api/category', categoryData);
                 },
-                getSingleItem: function(id){
-                    return $http.get('/api/posts/'+id);
+                getSingleCategory: function(id){
+                    return $http.get('/api/category/'+id);
                 },
                 remove: function(id){
-                    return $http.delete('/api/posts/'+id);
+                    return $http.delete('/api/category/'+id);
                 },
-                updateItem: function(id,postData){
-                    return $http.put('/api/posts/'+id, postData);
+                updateCategory: function(id,categoryData){
+                    return $http.put('/api/category/'+id, categoryData);
                 }
             }
         }]);

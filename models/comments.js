@@ -6,12 +6,13 @@
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
-    var PostSchema = new Schema({
-        postTitle: String,
-        postDesc:String,
-        postDate:Date
+    var CommentsSchema = new Schema({
+        comment: String,
+        _id:{type:String, ref:'Post'},
+        commentDate:Date,
+        _authorId:String
     });
 
-    module.exports = mongoose.model('Post',PostSchema);
+    module.exports = mongoose.model('Comments',CommentsSchema);
 
 }());

@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div>
+    <h2>Add Category</h2>
+    <div ng-if="message">
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Well done!</strong> You successfully created a category.
+        </div>
+    </div>
+    <form name="CategoryForm" ng-submit="createCategory(category)">
+        <div class="form-group">
+            <label for="">Category Name</label>
+            <input type="text" placeholder="Category Name" class="form-control" ng-model="category.title">
+        </div>
+        <div class="form-group">
+            <label for="">Category Description</label>
+            <textarea type="text" placeholder="Category Description" class="form-control" ng-model="category.desc"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="hidden" ng-init="category.author = userData._id"  class="form-control"  ng-model="category.author">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+    <div ng-include="'./views/blog/catgoryList.html'"></div>
+</div>

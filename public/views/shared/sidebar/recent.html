@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div ng-controller="recentCtrl">
+    <h4>Recent Posts</h4>
+    <div class="list-group">
+        <a ng-repeat="post in posts | limitTo:3" href="/posts/{{post._id}}" class="list-group-item" >
+            <h4 class="list-group-item-heading">{{post.postTitle}}</h4>
+            <p class="list-group-item-text">{{post.postDesc}}</p>
+        </a>
+    </div>
+</div>

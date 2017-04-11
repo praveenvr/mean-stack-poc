@@ -1,0 +1,22 @@
+<div>
+    <h1>Home</h1>
+    <p>{{tagline}}</p>
+<div>
+    {{message}}
+</div>
+    <ol>
+        <li ng-repeat="vd in viewData">
+            <div class="col-md-10">
+                {{vd.name}}
+            </div>
+            <div class="col-md-2">
+                <a href="/edit/{{vd._id}}">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </a>
+                    <a href="#" ng-click="deleteNerd(vd._id)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+            </div>
+        </li>
+    </ol>
+</div>

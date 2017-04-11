@@ -6,13 +6,13 @@
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
-    var CategorySchema = new Schema({
-        categoryTitle: String,
-        categoryDesc:String,
-        categoryDate:Date,
-        authorId:String
+    var MenuSchema = new Schema({
+        menuLabel: String,
+        menuUrl:String,
+        footerMenu:Boolean,
+        createdDate:Date
     });
 
-    module.exports = mongoose.model('Category',CategorySchema);
+    module.exports = mongoose.model('Menu',MenuSchema);
 
 }());

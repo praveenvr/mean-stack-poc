@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<nav class="navbar navbar-inverse" ng-controller="headerCtrl">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Blog</a>
+        </div>
 
-</body>
-</html>
+        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+        <ul class="nav navbar-nav navbar-left">
+            <li ng-repeat="category in categories"><a href="/category/{{category.categoryTitle}}">{{category.categoryTitle}}</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-if="isAuthenticated"><a href="/profile">{{userData.name}}</a></li>
+            <li ng-if="!isAuthenticated"><a href="/signin">Sign In</a></li>
+            <li ng-if="!isAuthenticated"><a href="/registration" >Sign Up</a></li>
+            <li ng-if="isAuthenticated"><a href="/" ng-click="logOut()">Log Out</a></li>
+        </ul>
+    </div>
+</nav>

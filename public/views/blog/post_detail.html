@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div ng-controller="postDetailCtrl">
+    <h1>{{postDetail.postTitle}}</h1>
+    <span>{{postDetail.postDate | date:'medium'}}</span> <span></span>
+    <p>
+        {{postDetail.postDesc}}
+    </p>
+</div>

@@ -1,27 +1,26 @@
 /**
- * Created by prvr on 12/14/2016.
+ * Created by prvr on 03/17/2017.
  */
 
-
 (function(){
-    angular.module('nerdService', [])
-        .factory('nerd',['$http', function($http){
+    angular.module('postService', [])
+        .factory('postServe',['$http', function($http){
 
             return{
-                get: function(){
-                    return $http.get('/api/bears');
+                getPost: function(){
+                    return $http.get('/api/posts');
                 },
-                create: function(nerdData){
-                    return $http.post('/api/bears', nerdData);
+                create: function(postData){
+                    return $http.post('/api/posts', postData);
                 },
                 getSingleItem: function(id){
-                    return $http.get('/api/bears/'+id);
+                    return $http.get('/api/posts/'+id);
                 },
                 remove: function(id){
-                    return $http.delete('/api/bears/'+id);
+                    return $http.delete('/api/posts/'+id);
                 },
-                updateItem: function(id,nerdData){
-                    return $http.put('/api/bears/'+id, nerdData);
+                updateItem: function(id,postData){
+                    return $http.put('/api/posts/'+id, postData);
                 }
             }
         }]);

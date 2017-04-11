@@ -6,13 +6,13 @@
     var mongoose = require('mongoose');
     var Schema = mongoose.Schema;
 
-    var PostSchema = new Schema({
-        postTitle: String,
-        postDesc:String,
-        postDate:Date,
-        authorId:String
+    var UserSchema = new Schema({
+        name: String,
+        email:{type:String},
+        password:String,
+        userRegDate:{ type: Date, default: Date.now }
     });
 
-    module.exports = mongoose.model('Post',PostSchema);
+    module.exports = mongoose.model('User',UserSchema);
 
 }());

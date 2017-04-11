@@ -1,0 +1,16 @@
+{
+  "name": "mean-blog",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-cookies": "latest",
+    "angular-animate": "^1.6.3",
+    "angular-messages": "^1.6.3",
+    "angular-local-storage": "^0.5.2",
+    "jquery": "^3.2.0"
+  }
+}

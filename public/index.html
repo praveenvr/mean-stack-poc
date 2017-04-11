@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Mean Blog</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+
+</head>
+</head>
+<body ng-app="meanApp">
+
+
+
+    <!-- HEADER -->
+    <header ng-include="'views/shared/header.html'"></header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <!-- ANGULAR DYNAMIC CONTENT -->
+                    <div ng-view></div>
+                </div>
+                <div class="col-md-3" ng-include="'views/shared/sidebar.html'"></div>
+            </div>
+        </div>
+    </main>
+    <footer ng-include="'views/shared/footer.html'"></footer>
+
+
+
+<!-- JS -->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<script src="libs/angular-animate/angular-animate.min.js"></script>
+<script src="libs/angular-messages/angular-messages.min.js"></script>
+<script src="libs/angular-cookies/angular-cookies.min.js"></script>
+<script src="libs/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+<!-- ANGULAR CUSTOM -->
+
+<!--Services-->
+<script src="js/services/nerdService.js"></script>
+<script src="js/services/postService.js"></script>
+<script src="js/services/userService.js"></script>
+<script src="js/services/categoryService.js"></script>
+<!--Shared Controllers-->
+<script src="js/controllers/shared/headerCtrl.js"></script>
+
+<script src="js/controllers/mainCtrl.js"></script>
+<script src="js/controllers/nerdCtrl.js"></script>
+<script src="js/controllers/editNerdCtrl.js"></script>
+<!--Blog Controllers-->
+<script src="js/controllers/blog/postCtrl.js"></script>
+<script src="js/controllers/blog/postDetailCtrl.js"></script>
+<script src="js/controllers/blog/categoryListCtrl.js"></script>
+<!--Form Controllers-->
+<script src="js/controllers/forms/createPostCtrl.js"></script>
+<script src="js/controllers/forms/createCategoryCtrl.js"></script>
+<script src="js/controllers/forms/registrationCtrl.js"></script>
+<script src="js/controllers/forms/loginCtrl.js"></script>
+<script src="js/controllers/shared/sidebar/recentCtrl.js"></script>
+<!--Route-->
+<script src="js/appRoutes.js"></script>
+<!--App-->
+<script src="js/app.js"></script>
+</body>
+</html>

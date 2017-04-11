@@ -13,4 +13,4 @@
 
     module.exports = mongoose.model('Bear',BearSchema);
 
-}())
+}());

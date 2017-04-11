@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<aside>
+    <div class="row">
+        <div ng-if="isAuthenticated" class="col-md-12" >
+            <div ng-include="'views/shared/sidebar/admin_menu.html'"></div>
+        </div>
+        <div class="col-md-12">
+            <div ng-include="'views/shared/sidebar/trending.html'"></div>
+        </div>
+        <div class="col-md-12">
+            <div ng-include="'views/shared/sidebar/recent.html'"></div>
+        </div>
+    </div>
+</aside>

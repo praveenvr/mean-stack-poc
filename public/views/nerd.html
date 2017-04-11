@@ -1,0 +1,15 @@
+<div>
+    <h2>Nerd</h2>
+    <p>{{tagline}}</p>
+
+    <div>
+        <form ng-submit="addNerds(user)" name="nerdForm" role="form">
+            <div class="form-group">
+                <input type="text" ng-model="user.name" name="nerdName">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Nerd">
+            </div>
+        </form>
+    </div>
+</div>

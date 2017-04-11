@@ -9,8 +9,9 @@
     var PostSchema = new Schema({
         postTitle: String,
         postDesc:String,
-        postDate:Date,
-        authorId:String
+        postCategory:String,
+        postDate:{ type: Date, default: Date.now },
+        authorId:{type:String}
     });
 
     module.exports = mongoose.model('Post',PostSchema);
