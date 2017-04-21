@@ -1,5 +1,3 @@
 {
-    "directory": "public/libs",
-	"proxy":"http://135.245.173.11:8000",
-	"https-proxy":"http://135.245.173.11:8000"
+    "directory": "public/libs"
 }
